@@ -1,0 +1,130 @@
+/* Reset any default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block; /* Ensures no extra inline space */
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-right a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-right a:hover {
+    text-decoration: underline; /* Optional: Hover effect for links */
+}
+
+/* Right-side Links (Support & Sign In) */
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #0066cc;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.btn-primary {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #e68a00; /* Slight color change on hover */
+}
+
+/* Features Section */
+.features {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Added gap for responsiveness */
+}
+
+.feature-item {
+    width: 250px;
+    text-align: left;
+}
+
+/* Testimonial Section */
+.testimonial {
+    padding: 40px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+blockquote {
+    font-size: 1.3em;
+    margin: 20px auto;
+    font-style: italic;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
