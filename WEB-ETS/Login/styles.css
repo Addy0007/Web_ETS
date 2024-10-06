@@ -1,43 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
-
-.sign-in-container {
-    max-width: 400px;
-    margin: 60px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
+/* Reset any default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-.sign-in-container h2 {
+/* Body Styles */
+body {
+    min-height: 100vh;  /* Allow body height to expand */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(231, 231, 231);
+    padding-top: 120px; /* Add padding for the fixed header */
+    overflow: auto; /* Ensure page is scrollable */
+}
+
+/* Header Styles */
+header {
+    width: 100%; /* Make the header full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0066cc;
+    color: #fff;
+    padding: 20px 30px;
+    position: fixed; /* Make the header fixed */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Logo Styles */
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-right a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+/* Container Styles */
+.container {
+    min-height: 600px;  /* Allow container height to expand */
+    width: 500px;
+    background-color: white;
+    box-shadow: 8px 8px 20px rgb(128, 128, 128);
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px; /* Removed excessive margin */
+}
+
+/* Button Styles */
+.btn {
+    height: 60px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 10px 10px 30px rgb(254, 215, 188);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.login,
+.signup {
+    font-size: 22px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Slider Styles */
+.slider {
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, rgb(255, 195, 110), rgb(255, 146, 91));
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Move Slider Class */
+.moveslider {
+    left: 250px;
+}
+
+/* Form Section Styles */
+.form-section {
+    min-height: 500px;  /* Allow form section to expand */
+    width: 1000px;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.form-section-move {
+    left: -500px;
+}
+
+.login-box,
+.signup-box {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Input Element Styles */
+.ele {
+    height: 60px;
+    width: 400px;
+    outline: none;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    border-radius: 50px;
+    padding-left: 30px;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form label {
-    text-align: left;
-    font-weight: bold;
-}
-
-form input {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form .btn-primary {
-    padding: 10px;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: #ff9900;
-    color: #fff;
+/* Button Click Styles */
+.clkbtn {
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, rgb(255, 195, 110), rgb(255, 146, 91));
+    font-size: 22px;
     border: none;
-    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 650px) {
+    .container {
+        width: 300px;
+    }
+    .ele {
+        width: 250px;
+        font-size: 15px;
+    }
+    .clkbtn {
+        width: 130px;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
 }
